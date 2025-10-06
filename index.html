@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Four card feature section</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+
+    }
+
+
+
+    body {
+      min-height: 100vh;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: hsl(200, 26%, 93%);
+      font-size: 15px;
+      padding-top: 30px;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+
+
+    }
+
+    header h1 {
+      font-size: 3rem;
+      line-height: 1.5;
+
+    }
+
+    header h4 {
+      font-size: 1.1rem;
+      line-height: 1.5;
+      color: hsl(208, 7%, 61%);
+    }
+
+    main {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 70%;
+      height: 50rem;
+      /*border: 2px solid;*/
+      margin-top: 5rem;
+
+    }
+
+    .container {
+      display: grid;
+      /*border: 2px solid black;*/
+      width: 100%;
+      height: 100%;
+      grid-template-columns: 30% 30% 30%;
+      grid-template-rows: 45% 45%;
+      justify-content: center;
+      gap: 2rem;
+
+    }
+
+    
+
+    .box div {
+      position: relative;
+      background-color: hsl(0, 0%, 100%);
+      border: none;
+      text-align: left;
+      padding-left: 40px;
+      padding-top: 40px;
+      border-radius: 10px;
+      box-shadow: 5px 5px 15px hsl(210, 23%, 88%),
+        -5px 5px 15px hsl(210, 23%, 88%);
+
+
+    }
+
+    .box h3 {
+      font-size: 1.5rem;
+      font-weight: 700;
+
+    }
+
+
+    .box1 {
+      grid-area: 1/2/2/2;
+      display: flex;
+      align-items: end;
+
+    }
+
+    .box2 {
+      grid-area: 1/1/3/2;
+      display: flex;
+      align-items: center;
+    }
+
+    .box3 {
+      grid-area: 1/3/3/4;
+      display: flex;
+      align-items: center;
+    }
+
+    .box4 {
+      grid-area: 2/2/3/3;
+      display: flex;
+      align-items: start;
+    }
+
+    .box1 div {
+      border-top: 5px solid hsl(0, 78%, 62%);
+      width: 100%;
+      height: 100%;
+
+
+    }
+
+    .box4 div {
+      border-top: 5px solid hsl(34, 97%, 64%);
+      width: 100%;
+      height: 100%;
+
+
+    }
+
+    .box2 div {
+      border-top: 5px solid hsl(180, 62%, 55%);
+      width: 100%;
+      height: 50%;
+
+    }
+
+    .box3 div {
+      border-top: 5px solid hsl(212, 86%, 64%);
+      width: 100%;
+      height: 50%;
+
+
+    }
+
+    .box article {
+      position: absolute;
+      top: 25%;
+      font-size: 1.1rem;
+      color: hsl(208, 7%, 66%);
+    }
+
+    .box img {
+      position: absolute;
+      right: 10%;
+      bottom: 10%;
+    }
+
+
+    /* Mobile view (use flexbox layout) */
+      @media (max-width: 800px) {
+      main {
+        width: 90%;
+        height: 50rem;
+
+        margin-top: 2rem;
+
+      }
+
+      .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+      }
+
+      .box {
+        width: 100%;
+        height: 25%;
+
+      }
+
+      .box div {
+        width: 100%;
+        height: 100%;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        position: relative;
+      }
+
+      .box img {
+        position: absolute;
+        right: 5%;
+        bottom: 5%;
+      }
+
+      header h1 {
+        font-size: 1.9rem;
+        line-height: 1.3;
+      }
+
+      header h4 {
+        font-size: 0.9rem;
+      }
+
+      .box h3 {
+        position: absolute;
+        top: 0;
+        font-size: 1rem;
+      }
+
+      .box article {
+        position: absolute;
+        font-size: 0.9rem;
+        bottom: 0;
+      }
+
+    }
+
+
+    /* Tablet */
+      @media (min-width: 1025px) and (max-width: 1280px) {
+      .box {
+        
+        text-align: center;
+      }
+      header h1 {
+        font-size: 2.2rem;
+      }
+
+      header h4 {
+        font-size: 0.9rem;
+      }
+
+      .box h3 {
+        font-size: 1.3rem;
+      }
+
+      .box article {
+        font-size: 0.9rem;
+      }
+    }
+
+    /* Small laptop */
+       @media (min-width: 1281px) {
+
+      header h1 {
+        font-size: 2.5rem;
+      }
+
+      header h4 {
+        font-size: 1rem;
+      }
+
+      .box h3 {
+        font-size: 1.5rem;
+      }
+
+      .box article {
+        font-size: 1rem;
+      }
+    }
+
+    /* Desktop & larger */
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1 style="color: hsl(208, 7%, 66%);"> Reliable, efficient delivery</h1>
+    <h1> Powered by Technology</h1>
+    <h4> Our Artificial Intelligence powered tools use millions of project data <br> points
+      to ensure that your project is successful</h4>
+  </header>
+  <main>
+    <div class="container">
+
+      <div class="box box1">
+        <div>
+          <h3>Team Leader</h3>
+          <article>
+            Scans our talent network to create the optimal team for your project</article>
+
+          <img src="images/icon-team-builder.svg" alt="">
+        </div>
+
+      </div>
+      <div class="box box2">
+        <div>
+          <h3>Supervisor</h3>
+          <article>
+            Monitors activity to identify project roadblocks</article>
+
+          <img src="images/icon-supervisor.svg" alt="">
+        </div>
+      </div>
+      <div class="box box3">
+        <div>
+          <h3>
+            Calculator
+          </h3>
+          <article>
+            Uses data from past projects to provide better delivery estimates
+          </article>
+          <img src="images/icon-calculator.svg" alt="">
+        </div>
+      </div>
+      <div class="box box4">
+        <div>
+          <h3>Karma</h3>
+          <article>
+            Regularly evaluates our talent to ensure quality</article>
+          <img src="images/icon-karma.svg" alt="">
+        </div>
+      </div>
+
+    </div>
+
+  </main>
+
+
+
+
+
+  <footer>
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="#">Tanya Sahu</a>.
+    </p>
+  </footer>
+</body>
+
+</html>
